@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgba(192, 214, 213, 0.99);
+}
+
+
+.container {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  position: relative;
+  left: 25%;
+  top: 30px;
+  width: 50%;
+  border: 2px solid #fff;
+  background-color: rgb(11, 98, 98);
+  border-radius: 15px;
+  box-shadow: 10px 6px 8px 2px rgba(12, 114, 94, 0.63);
+}
+@keyframes headingAnimation {
+      0% {
+        transform: translateX(0);
+        color: #fcfcfc;
+      }
+      50% {
+        transform: translateX(-10px);
+        color: #76a390;
+      }
+      100% {
+        transform: translateX(0);
+        color: #faf6f6;
+      }
+  }
+
+h1 {
+  color: aliceblue;
+  animation: headingAnimation 2s infinite;
+}
+
+@keyframes borderAnimation {
+      0% { border-color: #ccc; }
+      50% { border-color: #14a19851; }
+      100% { border-color: #ccc; }
+    }
+
+input{
+  padding: 2px;
+  height:20px;
+  font-size: 16px;
+  border: 2px solid #fff; /* White border */
+  border-radius: 5px;
+  margin-bottom: 10px; /* Adjust margin for spacing */
+  /* transition: border-color 0.3s ease; Add animation transition */
+  animation: borderAnimation 3s infinite; 
+}
+
+/* Add animation effect on input focus */
+input:focus {
+  border-color: #c50c90; /* Change border color on focus */
+}
+button {
+  padding: 4px 10px;
+  font-size: 16px;
+  background: linear-gradient(
+    to right,
+    #1c2220,
+    #1cd6a8
+  ); /* Gradient background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+/* Hover effect */
+button:hover {
+  background: linear-gradient(
+    to right,
+    #45a049,
+    #4caf50
+  ); /* Darker gradient on hover */
+}
+#typing-area {
+  margin-bottom: 20px;
+}
+
+#result {
+  display: none;
+  margin-top: 20px;
+}
